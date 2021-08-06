@@ -20,13 +20,13 @@
 
 1. Se debe instalar GIT según el sistema Windows, MacOs o Linux.
 ```
-	https://git-scm.com/downloads
+https://git-scm.com/downloads
 ```
 2. Una vez instalado hay que ingresar a la consola que se prefiera.
 3. Para configurar nombre y correo se escribe los siguientes comandos:
 ```
-	git config --global user.name "Mi Nombre"
-	git config --global user.email "Mi correo"
+git config --global user.name "Mi Nombre"
+git config --global user.email "Mi correo"
 ```
 
 ## CREAR MI REPOSITORIO LOCAL CON GIT:
@@ -35,7 +35,7 @@
 2. Escribir el siguiente comando para clonar el repositorio:
 
 ```
-	git clone https://github.com/miCuenta/miCopia
+git clone https://github.com/miCuenta/miCopia
 ```
 3. Comenzar a programar, o agregar documentos.
 
@@ -44,21 +44,21 @@
 1. Revisaremos el URL remoto de nuestro repositorio con:
 
 ```
-	git remote -v
+git remote -v
 ```
 
 2. Se cambiara el nombre de nuestro git remoto a fork con el siguiente comando:
 
 ```
-	git remote rename origin fork
-	git remote -v
+git remote rename origin fork
+git remote -v
 ```
 
 3. Se agregará el URL remoto del repositorio original, para eso se colocará el siguiente comando:
 
 ```
-	git remote add origin https://github.com/amner-py/disafra.git
-	git remote -v
+git remote add origin https://github.com/amner-py/disafra.git
+git remote -v
 ```
 
 ## CREAR MI PROPIA RAMA/BRANCH LOCAL:	\*Es necesario crear una rama para evitar errores en el repositorio principal\*
@@ -68,28 +68,29 @@
 \*Es necesario reemplazar miRama por su nombre, ejemplo: git branch juan \*
 
 ```
-	git branch miRama
-	git checkout miRama
+git branch miRama
+git checkout miRama
 ```
 
 	o
 
 ```
-	git checkout -b miRama
+git checkout -b miRama
 ```
 
 ## UNIENDO MIS RAMAS A LA MASTER:
 
 1. En consola escribimos los siguientes comandos:
+
 ```
-	git checkout master
-	git merge miRama
+git checkout master
+git merge miRama
 ```
 
 	o
 
 ```
-	git merge master miRama
+git merge master miRama
 ```
 
 ## SUBIR LOS CAMBIOS QUE REALICE A GITHUB
@@ -97,7 +98,7 @@
 1. En la consola escribir el siguiente comando:
 
 ```
-	git push fork miRama
+git push fork miRama
 ```
 
 ## HACER PULL REQUEST
