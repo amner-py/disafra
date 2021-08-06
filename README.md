@@ -11,12 +11,12 @@
 
 ## Español
 
-## - CREAR UN FORK:
+## CREAR UN FORK:
 
 1. En la parte derecha superior de este repositorio aparece un botón llamado **fork**, por favor hacer clic para generar tu propia
  versión de este repositorio en tu cuenta.
 
-## - CONFIGURAR MI GIT:
+## CONFIGURAR MI GIT:
 
 1. Se debe instalar GIT según el sistema Windows, MacOs o Linux.
 ```
@@ -29,7 +29,7 @@
 	git config --global user.email "Mi correo"
 ```
 
-## - CREAR MI REPOSITORIO LOCAL CON GIT:
+## CREAR MI REPOSITORIO LOCAL CON GIT:
 
 1. Entrar a la consola y ubicarnos en la ruta donde clonaremos nuestro repositorio.
 2. Escribir el siguiente comando para clonar el repositorio:
