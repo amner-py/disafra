@@ -72,7 +72,7 @@ git branch miRama
 git checkout miRama
 ```
 
-	o
+o
 
 ```
 git checkout -b miRama
@@ -87,7 +87,7 @@ git checkout master
 git merge miRama
 ```
 
-	o
+o
 
 ```
 git merge master miRama
