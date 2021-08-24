@@ -140,7 +140,7 @@ activar el entorno de la siguiente manera:
 ```
 source env-lin/bin/activate
 ```
-```
+
 4. Una vez encendido el entorno virtual de python instalar los requerimientos con el comando:
 
 ```
