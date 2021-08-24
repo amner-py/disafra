@@ -122,51 +122,51 @@ git push fork miRama
 2. Ubicarse en el repositorio clonado
 3. Desde consola ingresar los comandos para activar el entorno virtual python:
 
-´´´
+```
 cd env-win/Scripts/
 activate
 cd ..
 cd ..
-´´´
+```
 
 de tener SO linux crear un entorno virtual de la siguiente manera en la ruta **DISAFRA/**:
 
-´´´
+```
 python -m venv env-lin
-´´´
+```
 
 activar el entorno de la siguiente manera:
 
-´´´
+```
 source env-lin/bin/activate
-´´´
-
+```
+```
 4. Una vez encendido el entorno virtual de python instalar los requerimientos con el comando:
 
-´´´
+```
 pip install -r requirements.txt
-´´´
+```
 
 5. Ingresar a la carpeta **app** con el siguiente comando
 
-´´´
+```
 cd app
-´´´
+```
 
 6. Crear migración necesaria para el admin de django:
 
-´´´
+```
 python manage.py migrate
-´´´
+```
 
 7. Crear un super usuario para ingresar al admin:
 
-´´´
+```
 python manage.py createsuperuser
-´´´
+```
 
 8. Corre el servidor local de Django:
 
-´´´
+```
 python manage.py runserver
-´´´
+```
