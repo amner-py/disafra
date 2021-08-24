@@ -105,4 +105,68 @@ git push fork miRama
 6. Se escribe un mensaje o comentario de lo que se realizó o una previa de qué se agregará.
 7. Clic en **Create pull request**
 
+## PRIMEROS PASOS CON EL SISTEMA
 
+## INSTALANDO Y UTILIZANDO MYSQL
+
+1. Instalar MySQL Workbench
+2. Crear una conexión en workbench de no tener una.
+3. Crear un usuario llamado: **admin**
+4. Colocarle de contraseña: **admin123**
+5. Abrir el documento **disafra.sql** en Workbench.
+6. Correr el archivo.
+
+## INSTALANDO REQUERIMIENTOS PARA EL PROYECTO
+
+1. Entrar a la consola de preferencia
+2. Ubicarse en el repositorio clonado
+3. Desde consola ingresar los comandos para activar el entorno virtual python:
+
+´´´
+cd env-win/Scripts/
+activate
+cd ..
+cd ..
+´´´
+
+de tener SO linux crear un entorno virtual de la siguiente manera en la ruta **DISAFRA/**:
+
+´´´
+python -m venv env-lin
+´´´
+
+activar el entorno de la siguiente manera:
+
+´´´
+source env-lin/bin/activate
+´´´
+
+4. Una vez encendido el entorno virtual de python instalar los requerimientos con el comando:
+
+´´´
+pip install -r requirements.txt
+´´´
+
+5. Ingresar a la carpeta **app** con el siguiente comando
+
+´´´
+cd app
+´´´
+
+6. Crear migración necesaria para el admin de django:
+
+´´´
+python manage.py migrate
+´´´
+
+7. Crear un super usuario para ingresar al admin:
+
+´´´
+python manage.py createsuperuser
+´´´
+
+8. Corre el servidor local de Django:
+
+´´´
+python manage.py runserver
+´´´
