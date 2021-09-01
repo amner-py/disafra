@@ -123,10 +123,14 @@ git push fork miRama
 3. Desde consola ingresar los comandos para activar el entorno virtual python:
 
 ```
+python -m venv env-win
+```
+
+Activar el entorno virual en windows
+
+```
 cd env-win/Scripts/
 activate
-cd ..
-cd ..
 ```
 
 de tener SO linux crear un entorno virtual de la siguiente manera en la ruta **DISAFRA/**:
@@ -139,6 +143,13 @@ activar el entorno de la siguiente manera:
 
 ```
 source env-lin/bin/activate
+```
+
+Salir de la carpeta de entorno a la ruta principal
+
+```
+cd ..
+cd ..
 ```
 
 4. Una vez encendido el entorno virtual de python instalar los requerimientos con el comando:
