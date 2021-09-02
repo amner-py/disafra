@@ -8,7 +8,7 @@ class Persona(models.Model):
     apellido = models.CharField(db_column='APELLIDO', max_length=50)  # Field name made lowercase.
     fecha_nacimiento = models.DateField(db_column='FECHA_NACIMIENTO')  # Field name made lowercase.
     edad = models.IntegerField(db_column='EDAD')  # Field name made lowercase.
-    telefono_num = models.ForeignKey(Telefono, models.DO_NOTHING, db_column='TELEFONO_NUM', blank=True, null=True)  # Field name made lowercase.
+    telefono_num = models.ForeignKey(Telefono, on_delete=models.CASCADE, db_column='TELEFONO_NUM', blank=True, null=True)  # Field name made lowercase.
 
     class Meta:
         managed = False

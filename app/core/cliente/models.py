@@ -15,9 +15,9 @@ class UsuarioCliente(models.Model):
 
 class Cliente(models.Model):
     nit_cliente = models.CharField(db_column='NIT_CLIENTE', primary_key=True, max_length=15)  # Field name made lowercase.
-    persona = models.ForeignKey(Persona, models.DO_NOTHING, db_column='PERSONA_ID')  # Field name made lowercase.
+    persona = models.ForeignKey(Persona, on_delete=models.CASCADE, db_column='PERSONA_ID')  # Field name made lowercase.
     mayorista = models.CharField(db_column='MAYORISTA', max_length=1)  # Field name made lowercase.
-    correo = models.ForeignKey(UsuarioCliente, models.DO_NOTHING, db_column='CORREO')  # Field name made lowercase.
+    correo = models.ForeignKey(UsuarioCliente, on_delete=models.CASCADE, db_column='CORREO')  # Field name made lowercase.
 
     class Meta:
         managed = False

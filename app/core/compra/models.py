@@ -13,8 +13,8 @@ class Compra(models.Model):
     fecha_compra = models.DateField(db_column='FECHA_COMPRA')  # Field name made lowercase.
     entregado = models.CharField(db_column='ENTREGADO', max_length=1)  # Field name made lowercase.
     fecha_entregado = models.DateField(db_column='FECHA_ENTREGADO')  # Field name made lowercase.
-    visitador = models.ForeignKey(Visitador, models.DO_NOTHING, db_column='VISITADOR_ID')  # Field name made lowercase.
-    empleado_cod = models.ForeignKey(Empleado, models.DO_NOTHING, db_column='EMPLEADO_COD')  # Field name made lowercase.
+    visitador = models.ForeignKey(Visitador, db_column='VISITADOR_ID', on_delete=models.CASCADE)  # Field name made lowercase.
+    empleado_cod = models.ForeignKey(Empleado, db_column='EMPLEADO_COD', on_delete=models.CASCADE)  # Field name made lowercase.
 
     class Meta:
         managed = False
@@ -23,7 +23,7 @@ class Compra(models.Model):
 
 class DetalleCompra(models.Model):
     id_detalle_compra = models.IntegerField(db_column='ID_DETALLE_COMPRA', primary_key=True)  # Field name made lowercase.
-    detalle_producto = models.ForeignKey(DetalleProducto, models.DO_NOTHING, db_column='DETALLE_PRODUCTO_ID')  # Field name made lowercase.
+    detalle_producto = models.ForeignKey(DetalleProducto, on_delete=models.CASCADE, db_column='DETALLE_PRODUCTO_ID')  # Field name made lowercase.
     cantidad = models.IntegerField(db_column='CANTIDAD')  # Field name made lowercase.
     subtotal = models.DecimalField(db_column='SUBTOTAL', max_digits=7, decimal_places=2)  # Field name made lowercase.
     compra_num = models.ForeignKey(Compra, models.DO_NOTHING, db_column='COMPRA_NUM')  # Field name made lowercase.

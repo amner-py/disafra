@@ -32,8 +32,8 @@ class Producto(models.Model):
 
 class DetalleProducto(models.Model):
     id_detalle_producto = models.IntegerField(db_column='ID_DETALLE_PRODUCTO', primary_key=True)  # Field name made lowercase.
-    proveedor = models.ForeignKey(Proveedor, models.DO_NOTHING, db_column='PROVEEDOR_ID')  # Field name made lowercase.
-    producto_cod = models.ForeignKey(Producto, models.DO_NOTHING, db_column='PRODUCTO_COD')  # Field name made lowercase.
+    proveedor = models.ForeignKey(Proveedor, on_delete=models.CASCADE, db_column='PROVEEDOR_ID')  # Field name made lowercase.
+    producto_cod = models.ForeignKey(Producto, on_delete=models.CASCADE, db_column='PRODUCTO_COD')  # Field name made lowercase.
     precio_costo = models.DecimalField(db_column='PRECIO_COSTO', max_digits=7, decimal_places=2)  # Field name made lowercase.
 
     class Meta:

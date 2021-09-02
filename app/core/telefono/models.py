@@ -12,7 +12,7 @@ class TipoTelefono(models.Model):
 
 class Telefono(models.Model):
     num_telefono = models.CharField(db_column='NUM_TELEFONO', primary_key=True, max_length=16)
-    tipo_telefono = models.ForeignKey(TipoTelefono, db_column='TIPO_TELEFONO_ID')
+    tipo_telefono = models.ForeignKey(TipoTelefono, on_delete=models.CASCADE, db_column='TIPO_TELEFONO_ID')
     extension = models.CharField(db_column='EXTENSION', max_length=5, blank=True, null=True)
 
     class Meta:
