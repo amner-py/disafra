@@ -20,7 +20,7 @@ class Producto(models.Model):
     precio_venta = models.DecimalField(db_column='PRECIO_VENTA', max_digits=7, decimal_places=2)  # Field name made lowercase.
     fecha_agregado = models.DateField(db_column='FECHA_AGREGADO')  # Field name made lowercase.
     fecha_vencimiento = models.DateField(db_column='FECHA_VENCIMIENTO')  # Field name made lowercase.
-    recien_ingreso = models.CharField(db_column='RECIEN_INGRESO', max_length=1)  # Field name made lowercase.
+    recien_ingreso = models.BooleanField(db_column='RECIEN_INGRESO')  # Field name made lowercase.
     cantidad = models.IntegerField(db_column='CANTIDAD')  # Field name made lowercase.
     marca = models.ForeignKey(Marca, models.DO_NOTHING, db_column='MARCA_ID')  # Field name made lowercase.
     sucursal = models.ForeignKey(Sucursal, models.DO_NOTHING, db_column='SUCURSAL_ID')  # Field name made lowercase.

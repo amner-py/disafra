@@ -18,7 +18,7 @@ class Sucursal(models.Model):
 class UsuarioSucursal(models.Model):
     usuario_sucursal = models.CharField(db_column='USUARIO_SUCURSAL', primary_key=True, max_length=50)  # Field name made lowercase.
     pass_field = models.CharField(db_column='PASS', max_length=64)  # Field name made lowercase. Field renamed because it was a Python reserved word.
-    activo = models.CharField(db_column='ACTIVO', max_length=1)  # Field name made lowercase.
+    activo = models.BooleanField(db_column='ACTIVO')  # Field name made lowercase.
     fecha_creado = models.DateField(db_column='FECHA_CREADO', blank=True, null=True)  # Field name made lowercase.
     sucursal = models.ForeignKey(Sucursal, on_delete=models.CASCADE, db_column='SUCURSAL_ID')  # Field name made lowercase.
 

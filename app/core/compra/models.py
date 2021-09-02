@@ -9,9 +9,9 @@ class Compra(models.Model):
     descripcion = models.CharField(db_column='DESCRIPCION', max_length=255, blank=True, null=True)  # Field name made lowercase.
     total = models.DecimalField(db_column='TOTAL', max_digits=7, decimal_places=2)  # Field name made lowercase.
     total_pagado = models.DecimalField(db_column='TOTAL_PAGADO', max_digits=7, decimal_places=2)  # Field name made lowercase.
-    pagado = models.CharField(db_column='PAGADO', max_length=1)  # Field name made lowercase.
+    pagado = models.BooleanField(db_column='PAGADO')  # Field name made lowercase.
     fecha_compra = models.DateField(db_column='FECHA_COMPRA')  # Field name made lowercase.
-    entregado = models.CharField(db_column='ENTREGADO', max_length=1)  # Field name made lowercase.
+    entregado = models.BooleanField(db_column='ENTREGADO')  # Field name made lowercase.
     fecha_entregado = models.DateField(db_column='FECHA_ENTREGADO')  # Field name made lowercase.
     visitador = models.ForeignKey(Visitador, db_column='VISITADOR_ID', on_delete=models.CASCADE)  # Field name made lowercase.
     empleado_cod = models.ForeignKey(Empleado, db_column='EMPLEADO_COD', on_delete=models.CASCADE)  # Field name made lowercase.
