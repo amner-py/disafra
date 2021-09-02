@@ -1,5 +1,6 @@
 from django.db import models
 from core.persona.models import Persona
+from core.sucursal.models import Sucursal
 
 
 class Puesto(models.Model):
@@ -22,6 +23,7 @@ class Empleado(models.Model):
     persona = models.ForeignKey(Persona, models.DO_NOTHING, db_column='PERSONA_ID')  # Field name made lowercase.
     correo = models.CharField(db_column='CORREO', max_length=100, blank=True, null=True)  # Field name made lowercase.
     puesto = models.ForeignKey(Puesto, models.DO_NOTHING, db_column='PUESTO_ID')  # Field name made lowercase.
+    sucursal_id = models.ForeignKey(Sucursal, models.DO_NOTHING, db_column='SUCURSAL_ID')  # Field name made lowercase.
 
     class Meta:
         managed = False
