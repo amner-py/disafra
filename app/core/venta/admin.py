@@ -2,7 +2,12 @@ from django.contrib import admin
 from core.venta.models import Venta,DetalleVenta
 
 
+class DetalleVentaInline(admin.TabularInline):
+    model = DetalleVenta
+
+
 class VentaAdmin(admin.ModelAdmin):
+    inlines = [DetalleVentaInline]
     list_display = ['num_venta','cliente_nit','empleado_cod','sucursal','fecha_venta','total']
     list_filter = ['empleado_cod','sucursal','fecha_venta']
     list_editable = ['cliente_nit']
