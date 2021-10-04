@@ -17,6 +17,8 @@ class Cotizacion(models.Model):
     class Meta:
         managed = False
         db_table = 'cotizacion'
+        verbose_name = 'Cotización'
+        verbose_name_plural = 'Cotizaciones'
 
 
 class DetalleCotizacion(models.Model):
@@ -30,3 +32,5 @@ class DetalleCotizacion(models.Model):
     class Meta:
         managed = False
         db_table = 'detalle_cotizacion'
+        verbose_name = 'Detalle de Cotización'
+        verbose_name_plural = 'Detalles de Cotizaciones'

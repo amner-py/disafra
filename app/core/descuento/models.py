@@ -9,3 +9,5 @@ class Descuento(models.Model):
     class Meta:
         managed = False
         db_table = 'descuento'
+        verbose_name = 'Descuento'
+        verbose_name_plural = 'Descuentos'

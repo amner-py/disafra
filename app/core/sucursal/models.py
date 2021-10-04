@@ -13,6 +13,8 @@ class Sucursal(models.Model):
     class Meta:
         managed = False
         db_table = 'sucursal'
+        verbose_name = 'Sucursal'
+        verbose_name_plural = 'Sucursales'
 
 
 class UsuarioSucursal(models.Model):
@@ -25,6 +27,8 @@ class UsuarioSucursal(models.Model):
     class Meta:
         managed = False
         db_table = 'usuario_sucursal'
+        verbose_name = 'Usuario de Sucursal'
+        verbose_name_plural = 'Usuarios de Sucursales'
 
 
 class Permiso(models.Model):
@@ -33,6 +37,8 @@ class Permiso(models.Model):
     class Meta:
         managed = False
         db_table = 'permiso'
+        verbose_name = 'Permiso'
+        verbose_name_plural = 'Permisos'
 
 
 class PermisoUsuarioSucursal(models.Model):
@@ -43,3 +49,5 @@ class PermisoUsuarioSucursal(models.Model):
     class Meta:
         managed = False
         db_table = 'permiso_usuario_sucursal'
+        verbose_name = 'Permiso de Usuario'
+        verbose_name_plural = 'Permisos de Usuarios'

@@ -10,6 +10,8 @@ class Categoria(models.Model):
     class Meta:
         managed = False
         db_table = 'categoria'
+        verbose_name = 'Categoria'
+        verbose_name_plural = 'Categorias'
 
 
 class SubCategoria(models.Model):
@@ -21,3 +23,5 @@ class SubCategoria(models.Model):
     class Meta:
         managed = False
         db_table = 'sub_categoria'
+        verbose_name = 'Sub-Categoria'
+        verbose_name_plural = 'Sub-Categorias'

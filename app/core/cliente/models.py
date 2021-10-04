@@ -11,6 +11,8 @@ class UsuarioCliente(models.Model):
     class Meta:
         managed = False
         db_table = 'usuario_cliente'
+        verbose_name = 'Usuario de Cliente'
+        verbose_name_plural = 'Usuarios de Cliente'
 
 
 class Cliente(models.Model):
@@ -22,3 +24,5 @@ class Cliente(models.Model):
     class Meta:
         managed = False
         db_table = 'cliente'
+        verbose_name = 'Cliente'
+        verbose_name_plural = 'Clientes'

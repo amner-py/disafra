@@ -15,6 +15,8 @@ class Puesto(models.Model):
     class Meta:
         managed = False
         db_table = 'puesto'
+        verbose_name = 'Puesto'
+        verbose_name_plural = 'Puestos'
 
 
 class Empleado(models.Model):
@@ -28,3 +30,5 @@ class Empleado(models.Model):
     class Meta:
         managed = False
         db_table = 'empleado'
+        verbose_name = 'Empleado'
+        verbose_name_plural = 'Empleados'

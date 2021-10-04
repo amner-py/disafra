@@ -13,3 +13,5 @@ class Persona(models.Model):
     class Meta:
         managed = False
         db_table = 'persona'
+        verbose_name = 'Persona'
+        verbose_name_plural = 'Personas'

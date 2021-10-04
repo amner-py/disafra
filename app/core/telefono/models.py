@@ -8,6 +8,8 @@ class TipoTelefono(models.Model):
     class Meta:
         managed = False
         db_table = 'tipo_telefono'
+        verbose_name = 'Tipo de Teléfono'
+        verbose_name_plural = 'Tipos de Teléfonos'
 
 
 class Telefono(models.Model):
@@ -18,3 +20,5 @@ class Telefono(models.Model):
     class Meta:
         managed = False
         db_table = 'telefono'
+        verbose_name = 'Teléfono'
+        verbose_name_plural = 'Teléfonos'

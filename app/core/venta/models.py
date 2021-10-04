@@ -17,6 +17,8 @@ class Venta(models.Model):
     class Meta:
         managed = False
         db_table = 'venta'
+        verbose_name = 'Venta'
+        verbose_name_plural = 'Ventas'
 
 
 class DetalleVenta(models.Model):
@@ -30,3 +32,5 @@ class DetalleVenta(models.Model):
     class Meta:
         managed = False
         db_table = 'detalle_venta'
+        verbose_name = 'Detalle de Venta'
+        verbose_name_plural = 'Detalles de Ventas'

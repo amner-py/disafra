@@ -9,6 +9,8 @@ class Departamento(models.Model):
     class Meta:
         managed = False
         db_table = 'departamento'
+        verbose_name = 'Departamento'
+        verbose_name_plural = 'Departamentos'
 
 
 class Municipio(models.Model):
@@ -19,6 +21,8 @@ class Municipio(models.Model):
     class Meta:
         managed = False
         db_table = 'municipio'
+        verbose_name = 'Municipio'
+        verbose_name_plural = 'Municipios'
 
 
 class Direccion(models.Model):
@@ -31,3 +35,5 @@ class Direccion(models.Model):
     class Meta:
         managed = False
         db_table = 'direccion'
+        verbose_name = 'Dirección'
+        verbose_name_plural = 'Direcciones'

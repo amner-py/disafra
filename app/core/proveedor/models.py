@@ -14,6 +14,8 @@ class Proveedor(models.Model):
     class Meta:
         managed = False
         db_table = 'proveedor'
+        verbose_name = 'Proveedor'
+        verbose_name_plural = 'Proveedores'
 
 
 class Visitador(models.Model):
@@ -24,3 +26,5 @@ class Visitador(models.Model):
     class Meta:
         managed = False
         db_table = 'visitador'
+        verbose_name = 'Visitador'
+        verbose_name_plural = 'Visitadores'

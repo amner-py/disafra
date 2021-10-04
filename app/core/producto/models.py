@@ -10,6 +10,8 @@ class Marca(models.Model):
     class Meta:
         managed = False
         db_table = 'marca'
+        verbose_name = 'Marca'
+        verbose_name_plural = 'Marcas'
 
 
 class Producto(models.Model):
@@ -28,6 +30,8 @@ class Producto(models.Model):
     class Meta:
         managed = False
         db_table = 'producto'
+        verbose_name = 'Producto'
+        verbose_name_plural = 'Productos'
 
 
 class DetalleProducto(models.Model):
@@ -39,3 +43,5 @@ class DetalleProducto(models.Model):
     class Meta:
         managed = False
         db_table = 'detalle_producto'
+        verbose_name = 'Detalle de Producto'
+        verbose_name_plural = 'Detalles de Productos'

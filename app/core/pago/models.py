@@ -14,3 +14,5 @@ class PagoCompra(models.Model):
     class Meta:
         managed = False
         db_table = 'pago_compra'
+        verbose_name = 'Pago de Compra'
+        verbose_name_plural = 'Pagos de Compras'

@@ -19,6 +19,8 @@ class Compra(models.Model):
     class Meta:
         managed = False
         db_table = 'compra'
+        verbose_name = 'Compra'
+        verbose_name_plural = 'Compras'
 
 
 class DetalleCompra(models.Model):
@@ -31,3 +33,5 @@ class DetalleCompra(models.Model):
     class Meta:
         managed = False
         db_table = 'detalle_compra'
+        verbose_name = 'Detalle de Compra'
+        verbose_name_plural = 'Detalles de Compras'
