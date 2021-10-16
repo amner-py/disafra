@@ -8,8 +8,8 @@ class PagoCompra(models.Model):
     descripcion = models.CharField(db_column='DESCRIPCION', max_length=255, blank=True, null=True)  # Field name made lowercase.
     fecha_pago = models.DateField(db_column='FECHA_PAGO')  # Field name made lowercase.
     cantidad_pagada = models.DecimalField(db_column='CANTIDAD_PAGADA', max_digits=7, decimal_places=2)  # Field name made lowercase.
-    empleado_cod = models.ForeignKey(Empleado, on_delete=models.CASCADE, db_column='EMPLEADO_COD')  # Field name made lowercase.
-    compra_num = models.ForeignKey(Compra, on_delete=models.CASCADE,db_column='COMPRA_NUM')  # Field name made lowercase.
+    empleado_cod = models.ForeignKey(Empleado, models.DO_NOTHING, db_column='EMPLEADO_COD', blank=True, null=True)  # Field name made lowercase.
+    compra_num = models.ForeignKey(Compra, models.DO_NOTHING, db_column='COMPRA_NUM', blank=True, null=True)  # Field name made lowercase.
 
     class Meta:
         managed = False
