@@ -11,7 +11,7 @@ class Puesto(models.Model):
     salario = models.DecimalField(db_column='SALARIO', max_digits=7, decimal_places=2)  # Field name made lowercase.
     horario_entrada = models.TimeField(db_column='HORARIO_ENTRADA')  # Field name made lowercase.
     horario_salida = models.TimeField(db_column='HORARIO_SALIDA')  # Field name made lowercase.
-    jefe_puesto = models.ForeignKey(self, models.DO_NOTHING, db_column='JEFE_PUESTO', blank=True, null=True)  # Field name made lowercase.
+    jefe_puesto = models.ForeignKey('self', models.DO_NOTHING, db_column='JEFE_PUESTO', blank=True, null=True)  # Field name made lowercase.
 
     class Meta:
         managed = False

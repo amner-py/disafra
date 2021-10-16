@@ -27,7 +27,7 @@ class PermisoAdmin(admin.ModelAdmin):
 
 
 class DetallePermisoAdmin(admin.ModelAdmin):
-    list_display = ['id_permiso_usuario_sucursal','sucursal_usuario','permiso_num']
+    list_display = ['id_detalle_permiso','sucursal_usuario','permiso_num']
     list_filter = ['permiso_num']
     list_editable = ['sucursal_usuario','permiso_num']
     list_per_page = 10
@@ -37,4 +37,4 @@ class DetallePermisoAdmin(admin.ModelAdmin):
 admin.site.register(Sucursal,SucursalAdmin)
 admin.site.register(UsuarioSucursal,UsuarioSucursalAdmin)
 admin.site.register(Permiso,PermisoAdmin)
-admin.site.register(DetallePermiso,DetallePermisoAdminAdmin)
+admin.site.register(DetallePermiso,DetallePermisoAdmin)
