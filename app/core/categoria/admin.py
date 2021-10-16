@@ -11,11 +11,11 @@ class CategoriaAdmin(admin.ModelAdmin):
 
 
 class SubCategoriaAdmin(admin.ModelAdmin):
-    list_display = ['id_sub_categoria','nombre','categoria','producto_cod']
-    list_filter = ['nombre','categoria','producto_cod']
-    list_editable = ['categoria','producto_cod']
+    list_display = ['id_sub_categoria','nombre','categoria']
+    list_filter = ['nombre','categoria']
+    list_editable = ['categoria']
     list_per_page = 10
-    search_fields = ['nombre','categoria','producto_cod']
+    search_fields = ['nombre','categoria']
 
 
 admin.site.register(Categoria,CategoriaAdmin)
