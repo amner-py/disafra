@@ -14,7 +14,6 @@ var btnDescuento = document.getElementById("btn-descuento")
 var btnDireccion = document.getElementById("btn-direccion");
 var btnEmpleado = document.getElementById("btn-empleado");
 var btnPago = document.getElementById("btn-pago");
-var btnPersona = document.getElementById("btn-persona");
 var btnProducto = document.getElementById("btn-producto");
 var btnProveedor = document.getElementById("btn-proveedor");
 var btnSucursal = document.getElementById("btn-sucursal");
@@ -58,8 +57,6 @@ function selectedButton(){
         btnEmpleado.classList.toggle("selected");
     }else if(parameter=="pago"){
         btnPago.classList.toggle("selected");
-    }else if(parameter=="persona"){
-        btnPersona.classList.toggle("selected");
     }else if(parameter=="producto"){
         btnProducto.classList.toggle("selected");
     }else if(parameter=="proveedor"){

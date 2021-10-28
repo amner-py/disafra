@@ -16,6 +16,10 @@
     resize: none;
 }
 
+title{
+    text-transform: uppercase;
+}
+
 .in-txt{
     width: 15rem;
     height: 1.5rem;
