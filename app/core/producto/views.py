@@ -1,3 +1,5 @@
 from django.shortcuts import render
 
-# Create your views here.
+
+def formProducto(request):
+    return render(request,'form_producto.html')

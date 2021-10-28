@@ -15,7 +15,7 @@ class ProductoAdmin(admin.ModelAdmin):
     list_filter = ['recien_ingreso','marca','fecha_vencimiento']
     list_editable = ['nombre','porcentaje_ganancia','precio_venta','sucursal']
     list_per_page = 10
-    search_fields = ['nombre','marca','sucursal','precio_venta','sub_categoria']
+    search_fields = ['nombre','marca','sucursal','precio_venta','categoria']
 
 
 class DetalleProductoAdmin(admin.ModelAdmin):

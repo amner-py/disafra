@@ -1,3 +1,5 @@
 from django.shortcuts import render
 
-# Create your views here.
+
+def formTelefono(request):
+    return render(request,'form_telefono.html')

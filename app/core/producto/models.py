@@ -1,7 +1,7 @@
 from django.db import models
 from core.sucursal.models import Sucursal
 from core.proveedor.models import Proveedor
-from core.categoria.models import SubCategoria
+from core.categoria.models import Categoria
 
 
 class Marca(models.Model):
@@ -27,7 +27,7 @@ class Producto(models.Model):
     cantidad = models.IntegerField(db_column='CANTIDAD')  # Field name made lowercase.
     marca = models.ForeignKey(Marca, models.DO_NOTHING, db_column='MARCA_ID', blank=True, null=True)  # Field name made lowercase.
     sucursal = models.ForeignKey(Sucursal, models.DO_NOTHING, db_column='SUCURSAL_ID', blank=True, null=True)  # Field name made lowercase.
-    sub_categoria = models.ForeignKey(SubCategoria, models.DO_NOTHING, db_column='SUB_CATEGORIA_ID', blank=True, null=True)  # Field name made lowercase.
+    categoria = models.ForeignKey(Categoria, models.DO_NOTHING, db_column='CATEGORIA_ID', blank=True, null=True)  # Field name made lowercase.
 
     class Meta:
         managed = False
