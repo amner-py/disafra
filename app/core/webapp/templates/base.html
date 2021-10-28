@@ -1,0 +1,92 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="es">
+
+    <head>
+        <meta charset="UTF-8">
+        <!--<meta http-equiv="X-UA-Compatible" content="IE=edge"> -->
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" type="text/css" href="{% static "css/disafra_style.css" %}">
+        {% block stylesheet %} {% endblock %}
+        <title> {% block tittle %} {% endblock %}</title>
+    </head>
+
+    <body id="body">
+        <header class="header-container" id="header-container-id"> <!--Contenedor de Cabecera-->
+            <div class="menu-panel">
+                <button id="btn-show-panel" class="btn-panel">
+                    <span class="top-line"></span>
+                    <span class="middle-line"></span>
+                    <span class="bottom-line"></span>
+                </button>
+            </div>
+            <div class="logo">
+                <p>DISAFRA</p>
+            </div>
+            <!--<div class="search-engine">
+                <input type="text" placeholder="Buscar">
+            </div>-->
+            <nav class="main-menu"> <!--Menú de navegación-->
+                <a class="btn-link-menu txt-center" href="#">INICIO</a>
+                <a class="btn-link-menu txt-center" href="#">CUENTA</a>
+            </nav>
+        </header>
+        <div class="main-container"> <!--Contenedor principal-->
+            <div class="left-side-menu" id="left-menu"> <!--Contenedor de menú desplegable-->
+                <a class="btn-module txt-left" id="btn-home" href="/?b=home">
+                    <h4>Home</h4>
+                </a>
+                <a class="btn-module txt-left" id="btn-categoria" href="/categoria">
+                    <h4>Categoria</h4>
+                </a>
+                <a class="btn-module txt-left" id="btn-cliente" href="form_cliente.html?b=cliente">
+                    <h4>Cliente</h4>
+                </a>
+                <a class="btn-module txt-left" id="btn-compra" href="form_compra.html?b=compra">
+                    <h4>Compra</h4>
+                </a>
+                <a class="btn-module txt-left" id="btn-cotizacion" href="form_cotizacion.html?b=cotizacion">
+                    <h4>Cotización</h4>
+                </a>
+                <a class="btn-module txt-left" id="btn-descuento" href="form_descuento.html?b=descuento">
+                    <h4>Descuento</h4>
+                </a>
+                <a class="btn-module txt-left" id="btn-direccion" href="form_direccion.html?b=direccion">
+                    <h4>Dirección</h4>
+                </a>
+                <a class="btn-module txt-left" id="btn-empleado" href="form_empleado.html?b=empleado">
+                    <h4>Empleado</h4>
+                </a>
+                <a class="btn-module txt-left" id="btn-pago" href="form_pago.html?b=pago">
+                    <h4>Pago</h4>
+                </a>
+                <a class="btn-module txt-left" id="btn-persona" href="form_persona.html?b=persona">
+                    <h4>Persona</h4>
+                </a>
+                <a class="btn-module txt-left" id="btn-producto" href="form_producto.html?b=producto">
+                    <h4>Producto</h4>
+                </a>
+                <a class="btn-module txt-left" id="btn-proveedor" href="form_proveedor.html?b=proveedor">
+                    <h4>Proveedor</h4>
+                </a>
+                <a class="btn-module txt-left" id="btn-sucursal" href="form_sucursal.html?b=sucursal">
+                    <h4>Sucursal</h4>
+                </a>
+                <a class="btn-module txt-left" id="btn-telefono" href="form_telefono.html?b=telefono">
+                    <h4>Telefono</h4>
+                </a>
+                <a class="btn-module txt-left" id="btn-venta" href="form_venta.html?b=venta">
+                    <h4>Venta</h4>
+                </a>
+            </div>
+            <!--Contenido de página-->
+            {% block content %} {% endblock %}
+        </div>
+
+        <footer>
+            
+        </footer>
+        <script src="{% static "js/main_script_disafra.js" %}"></script>
+    </body>
+
+</html>

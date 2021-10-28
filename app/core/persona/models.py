@@ -15,3 +15,4 @@ class Persona(models.Model):
         db_table = 'persona'
         verbose_name = 'Persona'
         verbose_name_plural = 'Personas'
+        #abstract = True  #Prueba de abstacción.
