@@ -51,8 +51,6 @@ function selectedButton(){
         btnCotizacion.classList.toggle("selected");
     }else if(parameter=="descuento"){
         btnDescuento.classList.toggle("selected");
-    }else if(parameter=="direccion"){
-        btnDireccion.classList.toggle("selected");
     }else if(parameter=="empleado"){
         btnEmpleado.classList.toggle("selected");
     }else if(parameter=="pago"){
@@ -63,8 +61,6 @@ function selectedButton(){
         btnProveedor.classList.toggle("selected");
     }else if(parameter=="sucursal"){
         btnSucursal.classList.toggle("selected");
-    }else if(parameter=="telefono"){
-        btnTelefono.classList.toggle("selected");
     }else if(parameter=="venta"){
         btnVenta.classList.toggle("selected");
     }

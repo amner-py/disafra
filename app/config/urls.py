@@ -21,13 +21,11 @@ from core.cliente.views import formCliente
 from core.compra.views import formCompra
 from core.cotizacion.views import formCotizacion
 from core.descuento.views import formDescuento
-from core.direccion.views import formDireccion
 from core.empleado.views import formEmpleado
 from core.pago.views import formPago
 from core.producto.views import formProducto
 from core.proveedor.views import formProveedor
 from core.sucursal.views import formSucursal
-from core.telefono.views import formTelefono
 from core.venta.views import formVenta
 
 
@@ -39,12 +37,10 @@ urlpatterns = [
     path('compra/', formCompra),
     path('cotizacion/', formCotizacion),
     path('descuento/', formDescuento),
-    path('direccion/', formDireccion),
     path('empleado/', formEmpleado),
     path('pago/', formPago),
     path('producto/', formProducto),
     path('proveedor/', formProveedor),
     path('sucursal/', formSucursal),
-    path('telefono/', formTelefono),
     path('venta/', formVenta),
 ]
