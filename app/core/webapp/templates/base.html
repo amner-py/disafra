@@ -7,8 +7,8 @@
         <!--<meta http-equiv="X-UA-Compatible" content="IE=edge"> -->
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="stylesheet" type="text/css" href="{% static "css/disafra_style.css" %}">
-        {% block stylesheet %} {% endblock %}
-        <title> {% block title %} {% endblock %}</title>
+        {% block stylesheet %} {% endblock stylesheet %}
+        <title class="title-up"> {% block title %} {% endblock title %}</title>
     </head>
 
     <body id="body">
@@ -77,11 +77,11 @@
                 </a>
             </div>
             <!--Contenido de página-->
-            {% block content %} {% endblock %}
+            {% block content %} {% endblock content %}
         </div>
 
         <footer>
-            
+
         </footer>
         <script src="{% static "js/main_script_disafra.js" %}"></script>
     </body>

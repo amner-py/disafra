@@ -1,2 +1,17 @@
 {% extends 'base.html' %}
-{% block tittle %} Proveedor-Formulario {% endblock %}
+{% block title %} Proveedor-Formulario {% endblock title %}
+{% block content %}
+<div style="margin-top: 4rem;">
+    <form>
+        <label for="id_proveedor">Id:</label>
+        <input type="number" id="id_proveedor">
+        <label for="nombre_proveedor">Nombre:</label>
+        <input type="text" id="nombre_proveedor">
+        <label for="correo_proveedor">Nombre:</label>
+        <input type="email" id="correo_proveedor">
+        {% include 'direccion.html' %}
+        {% include 'telefono.html' %}
+        <button>Guardar</button>
+    </form>
+</div>
+{% endblock content %}

@@ -1,2 +1,30 @@
 {% extends 'base.html' %}
-{% block tittle %} Empleado-Formulario{% endblock %}
+{% block title %} Empleado-Formulario{% endblock title %}
+{% block content %}
+<div style="margin-top: 4rem;">
+    <form>
+        <label for="cod_empleado">Código de empleado:</label>
+        <input type="text" id="cod_empleado">
+        <label for="contra_empleado">Contraseña:</label>
+        <input type="password" id="contra_empleado">
+        <label for="contra_confirm_empleado">Confimar contraseña:</label>
+        <input type="password" id="contra_confirm_empleado">
+        <label for="correo_empleado">E-mail:</label>
+        <input type="text" id="correo_empleado">
+        {% include 'persona.html' %}
+        <label for="sucursal_empleado">Sucursal:</label>
+        <select id="sucursal_empleado">
+            <option>-----</option>
+            <option>CH</option>
+            <option>CH2</option>
+        </select>
+        <label for="puesto_empleado">Puesto:</label>
+        <select id="puesto_empleado">
+            <option>-----</option>
+            <option>Vendedor</option>
+            <option>Cajero</option>
+        </select>
+        <button>Guardar</button>
+    </form>
+</div>
+{% endblock content %}

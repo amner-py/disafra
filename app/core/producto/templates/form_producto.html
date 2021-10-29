@@ -1,2 +1,48 @@
 {% extends 'base.html' %}
-{% block tittle %} Producto-Formulario {% endblock %}
+{% block title %} Producto-Formulario {% endblock title %}
+{% block content %}
+<div style="margin-top: 4rem;">
+    <form>
+        <label for="cod_producto">Código:</label>
+        <input type="text" id="cod_producto">
+        <label for="nombre_producto">Nombre:</label>
+        <input type="text" id="nombre_producto">
+        <label for="descripcion_producto">Descripción:</label>
+        <textarea id="descripcion_producto" rows="4" cols="5"></textarea>
+        <label for="preciocosto_producto">Precio costo:</label>
+        <input type="number" id="preciocosto_producto">
+        <label for="porcentaje_producto">Porcentaje de ganancia:</label>
+        <input type="number" id="porcentaje_producto">
+        <label for="precioventa_producto">Precio de venta:</label>
+        <input type="number" id="precioventa_producto">
+        <label for="fechaagregado_producto">Fecha de agregado:</label>
+        <input type="date" id="fechaagregado_producto">
+        <label for="fechavencimiento_producto">Fecha de vencimiento:</label>
+        <input type="date" id="fechavencimiento_producto">
+        <label for="recieningreso_producto">Recién ingreso:</label>
+        <input type="checkbox" id="recieningreso_producto">
+        <label for="cantidad_producto">Cantidad:</label>
+        <input type="number" id="cantidad_producto">
+        <label for="marca_producto">Marca:</label>
+        <select id="marca_producto">
+            <option>-----</option>
+            <option>Bayer</option>
+        </select>
+        <label for="sucursal_producto">Sucursal:</label>
+        <select id="sucursal_producto">
+            <option>-----</option>
+            <option>CH</option>
+        </select>
+        <label for="categoria_producto">Categoria:</label>
+        <select id="categoria_producto">
+            <option>-----</option>
+        </select>
+        <label for="proveedor_producto">Proveedor:</label>
+        <select id="proveedor_producto">
+            <option>-----</option>
+            <option>Piersan</option>
+        </select>
+        <button>Guardar</button>
+    </form>
+</div>
+{% endblock content %}

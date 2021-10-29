@@ -16,10 +16,6 @@
     resize: none;
 }
 
-title{
-    text-transform: uppercase;
-}
-
 .in-txt{
     width: 15rem;
     height: 1.5rem;
@@ -228,9 +224,7 @@ body{
 
 /*--------Contenedor de página------*/
 .main-container{
-    display: flex;
     width: 100%;
-    justify-content: space-between;
     color: var(--dark-mode-text);
 }
 
@@ -299,6 +293,7 @@ body{
 }
 
 /*------CONTENIDO DE PAGINA------- -se hará hasta tener contenido-*/
+/*
 .content-page{
     display: flex;
     justify-content: center;
@@ -311,7 +306,8 @@ body{
     width: 90%;
 }
 
-/*-------------FORMULARIO----------------*/
+/*-------------FORMULARIO----------------
+
 .form-container{
     display: flex;
     flex-flow: column;
@@ -362,4 +358,4 @@ body{
     background-color: #8dbbdf;
     color: var(--dark-mode-text);
 }
-
+*/
