@@ -1,5 +1,4 @@
 from django.db import models
-from core.persona.models import Persona
 
 
 class Departamento(models.Model):
@@ -30,7 +29,6 @@ class Direccion(models.Model):
     direccion = models.CharField(db_column='DIRECCION', max_length=150)  # Field name made lowercase.
     referencia = models.CharField(db_column='REFERENCIA', max_length=150, blank=True, null=True)  # Field name made lowercase.
     municipio = models.ForeignKey(Municipio, models.DO_NOTHING, db_column='MUNICIPIO_ID', blank=True, null=True)  # Field name made lowercase.
-    persona = models.ForeignKey(Persona, models.DO_NOTHING, db_column='PERSONA_ID', blank=True, null=True)  # Field name made lowercase.
 
     class Meta:
         managed = False

@@ -1,5 +1,6 @@
 from django.db import models
 from core.telefono.models import Telefono
+from core.direccion.models import Direccion
 
 
 class Persona(models.Model):
@@ -9,6 +10,7 @@ class Persona(models.Model):
     fecha_nacimiento = models.DateField(db_column='FECHA_NACIMIENTO')  # Field name made lowercase.
     edad = models.IntegerField(db_column='EDAD')  # Field name made lowercase.
     telefono_num = models.ForeignKey(Telefono, models.DO_NOTHING, db_column='TELEFONO_NUM', blank=True, null=True)  # Field name made lowercase.
+    direccion = models.ForeignKey(Direccion, models.DO_NOTHING, db_column='DIRECCION_ID', blank=True,null=True)  # Field name made lowercase.
 
     class Meta:
         managed = False
