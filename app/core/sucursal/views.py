@@ -1,3 +1,5 @@
 from django.shortcuts import render
 
-# Create your views here.
+
+def formSucursal(request):
+    return render(request,'form_sucursal.html')

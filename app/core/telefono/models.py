@@ -2,8 +2,8 @@ from django.db import models
 
 
 class TipoTelefono(models.Model):
-    id_tipo_telefono = models.IntegerField(db_column='ID_TIPO_TELEFONO', primary_key=True)
-    tipo = models.CharField(db_column='TIPO', max_length=15, blank=True, null=True)
+    id_tipo_telefono = models.IntegerField(db_column='ID_TIPO_TELEFONO', primary_key=True)  # Field name made lowercase.
+    tipo = models.CharField(db_column='TIPO', max_length=15, blank=True, null=True)  # Field name made lowercase.
 
     class Meta:
         managed = False
@@ -13,9 +13,9 @@ class TipoTelefono(models.Model):
 
 
 class Telefono(models.Model):
-    num_telefono = models.CharField(db_column='NUM_TELEFONO', primary_key=True, max_length=16)
-    tipo_telefono = models.ForeignKey(TipoTelefono, on_delete=models.CASCADE, db_column='TIPO_TELEFONO_ID')
-    extension = models.CharField(db_column='EXTENSION', max_length=5, blank=True, null=True)
+    num_telefono = models.CharField(db_column='NUM_TELEFONO', primary_key=True, max_length=16)  # Field name made lowercase.
+    tipo_telefono = models.ForeignKey(TipoTelefono, models.DO_NOTHING, db_column='TIPO_TELEFONO_ID', blank=True, null=True)  # Field name made lowercase.
+    extension = models.CharField(db_column='EXTENSION', max_length=5, blank=True, null=True)  # Field name made lowercase.
 
     class Meta:
         managed = False

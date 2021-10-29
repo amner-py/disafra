@@ -1,3 +1,5 @@
 from django.shortcuts import render
 
-# Create your views here.
+
+def formDireccion(request):
+    return render(request,'form_direccion.html')

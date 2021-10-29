@@ -1,0 +1,19 @@
+{% extends 'base.html' %}
+{% block title %} Categoria-Formulario {% endblock title %}
+{% block content %}
+<div style="margin-top: 4rem;">
+    <form>
+        <label for="id_categoria">Id:</label>
+        <input type="number" id="id_categoria">
+        <label for="nombre_categoria">Nombre:</label>
+        <input type="text" id="nombre_categoria">
+        <label for="descripcion_categoria">Descripción:</label>
+        <textarea id="descripcion_categoria" rows="4" cols="5"></textarea>
+        <label for="categoria">Categoria:</label>
+        <select id="categoria">
+            <option>-----</option>
+        </select>
+        <button>Guardar</button>
+    </form>
+</div>
+{% endblock content %}

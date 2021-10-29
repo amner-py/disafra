@@ -1,0 +1,89 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="es">
+
+    <head>
+        <meta charset="UTF-8">
+        <!--<meta http-equiv="X-UA-Compatible" content="IE=edge"> -->
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" type="text/css" href="{% static "css/disafra_style.css" %}">
+        {% block stylesheet %} {% endblock stylesheet %}
+        <title class="title-up"> {% block title %} {% endblock title %}</title>
+    </head>
+
+    <body id="body">
+        <header class="header-container" id="header-container-id"> <!--Contenedor de Cabecera-->
+            <div class="menu-panel">
+                <button id="btn-show-panel" class="btn-panel">
+                    <span class="top-line"></span>
+                    <span class="middle-line"></span>
+                    <span class="bottom-line"></span>
+                </button>
+            </div>
+            <div class="logo">
+                <p>DISAFRA</p>
+            </div>
+            <!--<div class="search-engine">
+                <input type="text" placeholder="Buscar">
+            </div>-->
+            <nav class="main-menu"> <!--Menú de navegación-->
+                <a class="btn-link-menu txt-center" href="#">INICIO</a>
+                <a class="btn-link-menu txt-center" href="#">CUENTA</a>
+            </nav>
+        </header>
+        <div class="main-container"> <!--Contenedor principal-->
+            <div class="left-side-menu" id="left-menu"> <!--Contenedor de menú desplegable-->
+                <a class="btn-module txt-left" id="btn-home" href="/?b=home">
+                    <h4>Home</h4>
+                </a>
+                <a class="btn-module txt-left" id="btn-categoria" href="/categoria?b=categoria">
+                    <h4>Categoria</h4>
+                </a>
+                <a class="btn-module txt-left" id="btn-cliente" href="/cliente?b=cliente">
+                    <h4>Cliente</h4>
+                </a>
+                <a class="btn-module txt-left" id="btn-compra" href="/compra?b=compra">
+                    <h4>Compra</h4>
+                </a>
+                <a class="btn-module txt-left" id="btn-cotizacion" href="/cotizacion?b=cotizacion">
+                    <h4>Cotización</h4>
+                </a>
+                <a class="btn-module txt-left" id="btn-descuento" href="/descuento?b=descuento">
+                    <h4>Descuento</h4>
+                </a>
+                <a class="btn-module txt-left" id="btn-direccion" href="/direccion?b=direccion">
+                    <h4>Dirección</h4>
+                </a>
+                <a class="btn-module txt-left" id="btn-empleado" href="/empleado?b=empleado">
+                    <h4>Empleado</h4>
+                </a>
+                <a class="btn-module txt-left" id="btn-pago" href="/pago?b=pago">
+                    <h4>Pago</h4>
+                </a>
+                <a class="btn-module txt-left" id="btn-producto" href="/producto?b=producto">
+                    <h4>Producto</h4>
+                </a>
+                <a class="btn-module txt-left" id="btn-proveedor" href="/proveedor?b=proveedor">
+                    <h4>Proveedor</h4>
+                </a>
+                <a class="btn-module txt-left" id="btn-sucursal" href="/sucursal.html?b=sucursal">
+                    <h4>Sucursal</h4>
+                </a>
+                <a class="btn-module txt-left" id="btn-telefono" href="/telefono?b=telefono">
+                    <h4>Telefono</h4>
+                </a>
+                <a class="btn-module txt-left" id="btn-venta" href="/venta?b=venta">
+                    <h4>Venta</h4>
+                </a>
+            </div>
+            <!--Contenido de página-->
+            {% block content %} {% endblock content %}
+        </div>
+
+        <footer>
+
+        </footer>
+        <script src="{% static "js/main_script_disafra.js" %}"></script>
+    </body>
+
+</html>

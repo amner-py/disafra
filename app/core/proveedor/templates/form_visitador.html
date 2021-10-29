@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+{% block title %} Visitador-Formulario {% endblock title %}
+{% block content %}
+<div style="margin-top: 4rem;">
+    <form>
+        <label for="id_visitador">Id:</label>
+        <input type="text" id="id_visitador">
+        {% include 'persona.html' %}
+        <label for="proveedor_visitador">Proveedor:</label>
+        <select id="proveedor_visitador">
+            <option>-----</option>
+            <option>Bayer</option>
+        </select>
+        <button>Guardar</button>
+    </form>
+</div>
+{% endblock content %}

@@ -1,0 +1,14 @@
+{% extends 'base.html' %}
+{% block title %} Cliente-Formulario {% endblock title %}
+{% block content %}
+<div style="margin-top: 4rem;">
+    <form>
+        <label for="nit_cliente">NIT:</label>
+        <input type="text" id="nit_cliente">
+        {% include 'persona.html' %}
+        <label for="mayorista_cliente">Mayorista:</label>
+        <input type="checkbox" id="mayorista_cliente">
+        <button>Guardar</button>
+    </form>
+</div>
+{% endblock content %}
