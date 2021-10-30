@@ -25,6 +25,7 @@ from core.empleado.views import formEmpleado
 from core.pago.views import formPago
 from core.producto.views import formProducto
 from core.proveedor.views import formProveedor
+from core.proveedor.views import formVisitador
 from core.sucursal.views import formSucursal
 from core.venta.views import formVenta
 
@@ -41,6 +42,7 @@ urlpatterns = [
     path('pago/', formPago),
     path('producto/', formProducto),
     path('proveedor/', formProveedor),
+    path('visitador/', formVisitador),
     path('sucursal/', formSucursal),
     path('venta/', formVenta),
 ]
