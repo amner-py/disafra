@@ -1,14 +1,31 @@
 {% extends 'base.html' %}
 {% block title %} Cliente-Formulario {% endblock title %}
 {% block content %}
-<div style="margin-top: 4rem;">
-    <form>
-        <label for="nit_cliente">NIT:</label>
-        <input type="text" id="nit_cliente">
+
+
+<div class="bloque">
+    <h1>Clientes</h1>
+    <div class="opciones">
+        <button id="nuevo" type="submit" class="btn btn-success">Nuevo</button>
+        <button id="listar" type="submit" class="btn btn-primary">Lista</button>
+    </div>
+    <form class="formulario">
+        <div>
+            <div class="check1">
+                <input type="radio" role="switch" id="mayorista_cliente">
+                <label for="mayorista_cliente">Mayorista</label>
+            </div>
+        </div>
+        <div>
+            <input type="text" class="form-control" id="nit_cliente" placeholder="NIT">
+        </div>
         {% include 'persona.html' %}
-        <label for="mayorista_cliente">Mayorista:</label>
-        <input type="checkbox" id="mayorista_cliente">
-        <button>Guardar</button>
-    </form>
+        {% include 'telefono.html' %}
+        {% include 'direccion.html' %}
+        <div id="opciones2">
+            <button id="guardar" type="submit" class="btn btn-success">Guardar</button>
+            <button id="eliminar" type="submit" class="btn btn-danger">Eliminar</button>
+        </div>
 </div>
+
 {% endblock content %}

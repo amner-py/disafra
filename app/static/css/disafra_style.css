@@ -13,7 +13,7 @@
     margin: 0;
     padding: 0;
     text-decoration: none;
-    resize: none;
+    box-sizing: border-box;
 }
 
 .in-txt{
