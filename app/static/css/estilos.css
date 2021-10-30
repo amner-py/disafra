@@ -51,6 +51,11 @@
   justify-content: center;
 }
 
+#colspan-2{
+  width: 92%;
+  background-color: aqua;
+  
+}
 /* .main-container .contenedor .bloque .formulario select {
   width: 40%;
   height: 38px;
@@ -67,8 +72,8 @@
 }
 
 .main-container .contenedor .bloque .formulario textarea {
-  width: 91%;
-  margin-top: 5px;
+  width: 92%;
+  margin: 5px;
 }
 
 /*
