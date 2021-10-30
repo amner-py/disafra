@@ -1,16 +1,16 @@
-<label for="direccion">Dirección:</label>
-<input type="text" id="direccion">
-<label for="municipio">Municipio:</label>
-<select id="municipio">
-    <option>-----</option>
-    <option>Chiquimula</option>
-    <option>Esquipulas</option>
-</select>
-<label for="departamento">Departamento:</label>
-<select id="departamento">
-    <option>-----</option>
-    <option>Chiquimula</option>
-    <option>Zacapa</option>
-</select>
-<label for="referencia">Referencia:</label>
-<input type="text" id="referencia">
+<div>
+    <input type="text" class="form-control" id="direccion" placeholder="Direccion">
+</div>
+<div>
+    <select class="form-control" id="municipio">
+        <option selected>Municipio</option>
+        <option>...</option>
+        <option>Chiquimula</option>
+        <option>Esquipulas</option>
+    </select>
+</div>
+<div>
+    <input type="text" class="form-control" id="departamento" placeholder="Departamento" hidden>
+</div>
+
+<textarea class="form-control" id="referencia" placeholder="Referencia"></textarea>

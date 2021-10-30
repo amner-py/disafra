@@ -13,8 +13,8 @@ MySQL = {
         'default': {
             'ENGINE': 'django.db.backends.mysql',
             'NAME': 'disafra',
-            'USER': 'admin',
-            'PASSWORD': 'admin123',
+            'USER': 'root',
+            'PASSWORD': '',
             'HOST': 'localhost',
             'PORT': '3306',
         }
