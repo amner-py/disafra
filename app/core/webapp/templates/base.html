@@ -14,7 +14,7 @@
         <title class="title-up"> {% block title %} {% endblock title %}</title>
     </head>
 
-    <body id="body">
+    <body id="body" class="bg-black">
         <header class="header-container" id="header-container-id"> <!--Contenedor de Cabecera-->
             <div class="menu-panel">
                 <button id="btn-show-panel" class="btn-panel">
@@ -50,7 +50,7 @@
                       <li><a class="dropdown-item text-light" id="btn-proveedor" href="/proveedor?b=proveedor">Proveedor</a></li>
                       <li><a class="dropdown-item text-light" id="btn-visitador" href="/visitador?b=visitador">Visitador</a></li>
                     </ul>
-                  </div>
+                </div>
                 <div class="btn-group">
                     <button type="button" class="btn btn-secondary dropdown-toggle" data-bs-toggle="dropdown" data-bs-display="static" aria-expanded="false">
                       Operaciones
@@ -73,12 +73,13 @@
                       <li><a class="dropdown-item text-light" id="btn-categoria" href="/categoria?b=categoria">Categoria</a></li>
                       <li><a class="dropdown-item text-light" id="btn-descuento" href="/descuento?b=descuento">Descuento</a></li>
                     </ul>
-                  </div>
+                </div>
             </div>
             <!--Contenido de página-->
             <div class="contenedor">
                 {% block content %} {% endblock content %}
             </div>
+
         </div>
 
         <footer>
