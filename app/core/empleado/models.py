@@ -13,6 +13,9 @@ class Puesto(models.Model):
     horario_salida = models.TimeField(db_column='HORARIO_SALIDA')  # Field name made lowercase.
     jefe_puesto = models.ForeignKey('self', models.DO_NOTHING, db_column='JEFE_PUESTO', blank=True, null=True)  # Field name made lowercase.
 
+    def __str__(self):
+        return f'{self.nombre}'
+
     class Meta:
         managed = False
         db_table = 'puesto'
@@ -27,6 +30,9 @@ class Empleado(models.Model):
     correo = models.CharField(db_column='CORREO', max_length=100, blank=True, null=True)  # Field name made lowercase.
     sucursal = models.ForeignKey(Sucursal, models.DO_NOTHING, db_column='SUCURSAL_ID', blank=True, null=True)  # Field name made lowercase.
     puesto = models.ForeignKey(Puesto, models.DO_NOTHING, db_column='PUESTO_ID', blank=True, null=True)  # Field name made lowercase.
+
+    def __str__(self):
+        return f'{self.cod_empleado} - {self.persona.nombre}'
 
     class Meta:
         managed = False

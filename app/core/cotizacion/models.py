@@ -14,6 +14,9 @@ class Cotizacion(models.Model):
     fecha_venta = models.DateField(db_column='FECHA_VENTA')  # Field name made lowercase.
     total = models.DecimalField(db_column='TOTAL', max_digits=7, decimal_places=2)  # Field name made lowercase.
 
+    def __str__(self):
+        return f'{self.num_cotizacion} - {self.sucursal} - {self.total}'
+
     class Meta:
         managed = False
         db_table = 'cotizacion'
@@ -28,6 +31,9 @@ class DetalleCotizacion(models.Model):
     descuento_cod = models.ForeignKey(Descuento, models.DO_NOTHING, db_column='DESCUENTO_COD', blank=True, null=True)  # Field name made lowercase.
     cantidad = models.IntegerField(db_column='CANTIDAD')  # Field name made lowercase.
     subtotal = models.DecimalField(db_column='SUBTOTAL', max_digits=7, decimal_places=2)  # Field name made lowercase.
+
+    def __str__(self):
+        return f'{self.id_detalle_cotizacion} - {self.cantidad} - {self.subtotal}'
 
     class Meta:
         managed = False

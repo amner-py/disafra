@@ -6,6 +6,9 @@ class Descuento(models.Model):
     porcentaje = models.DecimalField(db_column='PORCENTAJE', max_digits=4, decimal_places=2)  # Field name made lowercase.
     descripcion = models.CharField(db_column='DESCRIPCION', max_length=255, blank=True, null=True)  # Field name made lowercase.
 
+    def __str__(self):
+        return f'{self.cod_descuento} - {self.porcentaje}%'
+
     class Meta:
         managed = False
         db_table = 'descuento'

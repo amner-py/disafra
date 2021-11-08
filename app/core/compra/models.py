@@ -16,6 +16,9 @@ class Compra(models.Model):
     visitador = models.ForeignKey(Visitador, models.DO_NOTHING, db_column='VISITADOR_ID', blank=True, null=True)  # Field name made lowercase.
     empleado_cod = models.ForeignKey(Empleado, models.DO_NOTHING, db_column='EMPLEADO_COD', blank=True, null=True)  # Field name made lowercase.
 
+    def __str__(self):
+        return f'{self.num_compra} - {self.total} - {self.fecha_compra}'
+
     class Meta:
         managed = False
         db_table = 'compra'
@@ -29,6 +32,9 @@ class DetalleCompra(models.Model):
     cantidad = models.IntegerField(db_column='CANTIDAD')  # Field name made lowercase.
     subtotal = models.DecimalField(db_column='SUBTOTAL', max_digits=7, decimal_places=2)  # Field name made lowercase.
     compra_num = models.ForeignKey(Compra, models.DO_NOTHING, db_column='COMPRA_NUM', blank=True, null=True)  # Field name made lowercase.
+
+    def __str__(self):
+        return f'{self.id_detalle_compra} - {self.cantidad} - {self.subtotal} - {self.compra_num.num_compra}'
 
     class Meta:
         managed = False
