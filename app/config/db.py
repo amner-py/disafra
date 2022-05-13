@@ -10,12 +10,27 @@ SQLITE = {
 }
 
 MySQL = {
-        'default': {
-            'ENGINE': 'django.db.backends.mysql',
-            'NAME': 'disafra',
-            'USER': 'admin',
-            'PASSWORD': 'admin123',
-            'HOST': 'localhost',
-            'PORT': '3306',
-        }
+    'default': {
+        'ENGINE': 'django.db.backends.mysql',
+        'NAME': 'disafra',
+        'USER': 'admin',
+        'PASSWORD': 'admin123',
+        'HOST': 'localhost',
+        'PORT': '3306',
     }
+}
+
+"""
+Para usar BD Oracle colocar la siguiente libreria: cx_Oracle
+pip install cx_Oracle
+"""
+Oracle = {
+    'default':{
+        'ENGINE':'django.db.backends.oracle',
+        'NAME':'BD_NOMBRE',
+        'USER':'BD_USUARIO',
+        'PASSWORD':'CONTRASEÑA',
+        'HOST':'IP_HOST_DOMINIO',
+        'PORT':'PUERTO',
+    }
+}
